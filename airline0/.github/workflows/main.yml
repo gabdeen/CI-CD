@@ -1,15 +1,13 @@
-name: Testing
-on:
-   push:
+---
+name: 'Testing'
+'on':
+  push:
     branches:
-      - main
-
+      - 'main'
 jobs:
   test_project:
-    runs-on: ubuntu-latest
+    runs-on: 'ubuntu-latest'
     steps:
-    - uses: actions/checkout@v2
-    - name: Run Django unit tests
-      run: |
-        pip3 install --user django
-        python3 manage.py test
+      - uses: 'actions/checkout@v2'
+      - name: 'Run Django unit tests'
+        run: "pip3 install --user django\npython3 manage.py test\n"
