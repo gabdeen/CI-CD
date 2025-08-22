@@ -9,4 +9,5 @@ jobs:
     steps:
       - uses: 'actions/checkout@v2'
       - name: 'Run Django unit tests'
-        run: "pip3 install --user django\npython3 manage.py test\n"
+        working-directory: ./airline0
+        run: "pip3 install --user django\npython3 manage.py test\npython3 manage.py migrate"
